@@ -1,0 +1,16 @@
+.drop_zone div {
+	background-color: #d9230f;
+	opacity: 0.5;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 100;
+	transition: 0.3s ease-in-out;
+	font-size: 100px;
+	font-weight: bold;
+}
+
+* {
+	transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
