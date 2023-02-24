@@ -34,7 +34,7 @@ const CardImage = ({ img, click, display }: BoxImageProps) => {
 					alt=""
 				/>
 
-				<div className="w-[calc(100%_-_80px)] text-sm flex flex-col text-black dark:text-white justify-end overflow-hidden transition-none">
+				<div className="text-box-image w-[calc(100%_-_80px)] text-sm flex flex-col text-black dark:text-white justify-end overflow-hidden transition-none">
 					<span className="text-card break-all">{img.name.length > 40 ? img.name.slice(0,40)+"[...]."+img.type.split("/")[1]:img.name}</span>
 					<span>
 						{img.resolution?.width}x{img.resolution?.height}

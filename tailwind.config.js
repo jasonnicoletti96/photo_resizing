@@ -19,10 +19,11 @@ module.exports = {
       'white':'white',
       'lightGrey':'#e5e5e5'
     },
-    extend: {},
+    extend: {
+  
+    },
   },
   plugins: [
-    require("daisyui"),
     require('tailwind-scrollbar')
   ],
   

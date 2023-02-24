@@ -149,12 +149,12 @@ function App() {
 
 	return (
 		<div className={logoDarkMode ? logoDarkMode : "dark"}>
-			<div className="flex justify-between w-screen h-screen p-8 bg-white dark:bg-darkGrey">
-				<div className="relative flex flex-col items-center justify-between w-[315px] h-full p-3 pr-0 mr-8 overflow-hidden rounded-lg bg-lightGrey dark:bg-grey">
+			<div className="box-container flex justify-between w-screen h-screen p-8 bg-white dark:bg-darkGrey">
+				<div className="container-box-images relative flex flex-col items-center justify-between w-[315px] h-full p-3 pr-0 mr-8 overflow-hidden rounded-lg bg-lightGrey dark:bg-grey">
 					<h2 className="w-full text-2xl font-bold text-black text-lelf dark:text-white">
 						Vos images
 					</h2>
-					<div className="relative w-full pr-5 overflow-y-scroll h-5/6 scrollbar-thin scrollbar-thumb-red scrollbar-thumb-rounded-lg scrollbar-track-white dark:scrollbar-track-darkGrey scrollbar-track-rounded-lg">
+					<div className="box-images relative w-full pr-5 overflow-y-scroll h-5/6 scrollbar-thin scrollbar-thumb-red scrollbar-thumb-rounded-lg scrollbar-track-white dark:scrollbar-track-darkGrey scrollbar-track-rounded-lg">
 						{images.map((img, index) => {
 							return (
 								<CardImage
@@ -183,10 +183,10 @@ function App() {
 					</div>
 				</div>
 
-				<div className="relative flex flex-col items-center w-5/6 h-full p-3 rounded-lg bg-lightGrey dark:bg-grey">
+				<div className="container-box-preview relative flex flex-col items-center w-5/6 h-full p-3 rounded-lg bg-lightGrey dark:bg-grey">
 					<div
 						onClick={toggleMode}
-						className="absolute flex justify-center items-center top-5 right-5 w-12 h-12 rounded-full bg-white dark:bg-darkGrey cursor-pointer"
+						className="button-dm absolute flex justify-center items-center top-5 right-5 w-12 h-12 rounded-full bg-white dark:bg-darkGrey cursor-pointer"
 					>
 						{logoDarkMode === "light" ? (
 							<img
@@ -206,7 +206,7 @@ function App() {
 					<h2 className="w-full text-2xl font-bold text-black text-lelf dark:text-white">
 						Prévisualisation
 					</h2>
-					<div className="flex flex-col">
+					<div className="flex flex-col box-preview">
 						<div className="relative mb-12 mt-12 text-center">
 							<Preview
 								imgPreview={imgPreview}
@@ -223,7 +223,7 @@ function App() {
 					</div>
 
 					<button
-						className="absolute self-end px-4 text-xl text-white rounded-lg h-14 bottom-3 right-3 bg-red "
+						className="button-save absolute self-end px-4 text-xl text-white rounded-lg h-14 bottom-3 right-3 bg-red "
 						onClick={exportToJPEG}
 					>
 						Telecharger
